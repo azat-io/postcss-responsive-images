@@ -1,6 +1,8 @@
-# [postcss][postcss]-responsive-images [![Build Status](https://travis-ci.org/azat-io/postcss-responsive-images.svg?branch=master)][ci] [![NPM version](https://badge.fury.io/js/postcss-responsive-images.svg)][npm] [![Dependency Status](https://gemnasium.com/azat-io/postcss-responsive-images.svg)][deps]
+# postcss-responsive-images
 
-> PostCSS plugin for making responsive images
+[![Build Status](https://travis-ci.org/azat-io/postcss-responsive-images.svg?branch=master)][ci] [![NPM version](https://badge.fury.io/js/postcss-responsive-images.svg)][npm] [![Dependency Status](https://gemnasium.com/azat-io/postcss-responsive-images.svg)][deps]
+
+PostCSS plugin for making responsive images.
 
 ## Install
 
@@ -15,50 +17,49 @@ npm install postcss-responsive-images --save
 ### Input
 
 ```css
-h1 {
-    color: red;
+.boo img {
+  image: responsive;
+}
+
+.foo img {
+  image: responsive-center;
 }
 ```
 
 ### Output
 
 ```css
-h1{color:red}
+.boo img {
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+.foo img {
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:20px auto;
+}
 ```
 
-## API
+## Author
 
-### responsiveImages([options])
+Azat S.
 
-#### options
-
-##### foo
-
-Type: `boolean`
-Default: `true`
-
-Description of what it does. An example:
-
-```js
-var css = 'h1 { color: red }';
-console.log(postcss([ require('postcss-responsive-images')({foo: true}) ]).process(css).css);
-
-// => 'h1{color:red}'
-```
-
-## Usage
-
-See the [PostCSS documentation](https://github.com/postcss/postcss#usage) for
-examples for your environment.
-
-## Contributing
-
-Pull requests are welcome. If you add functionality, then please add unit tests
-to cover it.
+<a href="https://github.com/azat-io">
+  <img src="https://raw.githubusercontent.com/azat-io/generator-alchemist/master/images/github.png" style="float:right">
+</a>
+<a href="https://twitter.com/azat_io">
+  <img src="https://raw.githubusercontent.com/azat-io/generator-alchemist/master/images/twitter.png" style="float:right">
+</a>
+<a href="https://www.facebook.com/azats.io">
+  <img src="https://raw.githubusercontent.com/azat-io/generator-alchemist/master/images/facebook.png" style="float:right">
+</a>
 
 ## License
 
-MIT © [Azat S.](https://github.com/azat-io/postcss-responsive-images)
+MIT
 
 [ci]:      https://travis-ci.org/azat-io/postcss-responsive-images
 [deps]:    https://gemnasium.com/azat-io/postcss-responsive-images
