@@ -18,11 +18,7 @@ npm install postcss-responsive-images --save
 
 ```css
 .boo img {
-  image: responsive;
-}
-
-.foo img {
-  image: responsive-center;
+  image-size: responsive;
 }
 ```
 
@@ -33,13 +29,6 @@ npm install postcss-responsive-images --save
   max-width:100%;
   height:auto;
   display:block;
-}
-
-.foo img {
-  max-width:100%;
-  height:auto;
-  display:block;
-  margin:20px auto;
 }
 ```
 
