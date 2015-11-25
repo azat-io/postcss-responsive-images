@@ -4,9 +4,9 @@ var plugin = require('./');
 var name = require('./package.json').name;
 
 var tests = [{
-    message: 'should transform css',
-    fixture: 'h1 { color: red }',
-    expected: 'h1 { color: red }',
+    message: 'Should transform css',
+    fixture: 'img { image-size: responsive }',
+    expected: 'img { max-width: 100%; height: auto; display: block }',
     options: {foo: true}
 }];
 
