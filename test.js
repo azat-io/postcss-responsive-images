@@ -1,30 +1,16 @@
-var test = require('tape');
-var postcss = require('postcss');
-var plugin = require('./');
-var name = require('./package.json').name;
+import postcss from 'postcss';
+import test    from 'ava';
 
-var tests = [{
-    message: 'Should transform css',
-    fixture: 'img { image-size: responsive }',
-    expected: 'img { max-width: 100%; height: auto; display: block }',
-    options: {foo: true}
-}];
+import plugin from './';
 
-function process (css, options) {
-    return postcss(plugin(options)).process(css).css;
+function run(t, input, output, opts = { }) {
+  return postcss([ plugin(opts) ]).process(input)
+    .then( result => {
+      t.same(result.css, output);
+      t.same(result.warnings().length, 0);
+    });
 }
 
-test(name, function (t) {
-    t.plan(tests.length);
-
-    tests.forEach(function (test) {
-        var options = test.options || {};
-        t.equal(process(test.fixture, options), test.expected, test.message);
-    });
-});
-
-test('should use the postcss plugin api', function (t) {
-    t.plan(2);
-    t.ok(plugin().postcssVersion, 'should be able to access version');
-    t.equal(plugin().postcssPlugin, name, 'should be able to access name');
+test('Add stylesheets for making responsive images', t => {
+  return run(t, 'img { image-size: responsive }', 'img { max-width: 100%; height: auto; display: block }', { });
 });
