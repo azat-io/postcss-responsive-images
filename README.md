@@ -32,20 +32,6 @@ npm install postcss-responsive-images --save
 }
 ```
 
-## Author
-
-Azat S.
-
-<a href="https://github.com/azat-io">
-  <img src="https://raw.githubusercontent.com/azat-io/generator-alchemist/master/images/github.png" style="float:right">
-</a>
-<a href="https://twitter.com/azat_io">
-  <img src="https://raw.githubusercontent.com/azat-io/generator-alchemist/master/images/twitter.png" style="float:right">
-</a>
-<a href="https://www.facebook.com/azats.io">
-  <img src="https://raw.githubusercontent.com/azat-io/generator-alchemist/master/images/facebook.png" style="float:right">
-</a>
-
 ## License
 
 MIT
