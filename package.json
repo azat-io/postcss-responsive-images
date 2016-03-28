@@ -1,6 +1,6 @@
 {
   "name": "postcss-responsive-images",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PostCSS plugin for making responsive images",
   "main": "index.js",
   "scripts": {
