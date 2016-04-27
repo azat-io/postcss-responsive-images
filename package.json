@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.13.0"
+    "ava": "^0.14.0"
   },
   "homepage": "https://github.com/azat-io/postcss-responsive-images",
   "author": {
